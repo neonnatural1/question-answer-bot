@@ -16,5 +16,5 @@ if st.button("Submit"):
     answerraw = answerbot(question=f"{user_input1}", context=f"{user_input2}")
     answer = answerraw["answer"]
     st.write(f"Answer: {answer}")
-    certainty = answerraw["score"]*100
-    st.write(f"Certainty:%{certainty:.2f}")
+    certainty = int(answerraw["score"]*100)
+    st.write(f"Certainty:{certainty:}%")
